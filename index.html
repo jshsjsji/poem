@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>诗·人</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="bg"></div>
+        <div class="overlay"></div>
+
+        <!-- 左侧：詩 -->
+        <div class="vertical-text left">詩</div>
+
+        <!-- 朱砂界栏 -->
+        <div class="divider"></div>
+
+        <!-- 右侧：人 -->
+        <div class="vertical-text right">人</div>
+
+        <!-- 水墨进入按钮 -->
+        <a href="list.html" class="ink-btn">进入诗境</a>
+
+        <!-- 诗词浮现容器 -->
+        <div class="poem-overlay" id="poemOverlay"></div>
+
+        <!-- 点击计数 -->
+        <div class="click-counter" id="clickCounter"></div>
+    </div>
+
+    <script src="counter.js"></script>
+<script src="ink.js"></script>
+    <script>
+        const hero = document.querySelector('.hero');
+        const bg = document.querySelector('.bg');
+        const left = document.querySelector('.vertical-text.left');
+        const right = document.querySelector('.vertical-text.right');
+
+        hero.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5);
+            const y = (e.clientY / window.innerHeight - 0.5);
+
+            bg.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
+            left.style.transform = `translate(${x * -5}px, ${y * -5}px)`;
+            right.style.transform = `translate(${x * -4}px, ${y * -4}px)`;
+        });
+    </script>
+</body>
+</html>

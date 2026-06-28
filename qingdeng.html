@@ -1,0 +1,123 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>青灯黄卷</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="qingdeng.css">
+</head>
+<body>
+
+<!-- 左侧目录 -->
+<nav class="catalog">
+    <h2>目　录</h2>
+    <ul>
+        <li><a href="#origin">诗之源流</a></li>
+        <li><a href="#classics">诗骚乐府</a></li>
+        <li><a href="#books">古籍述略</a></li>
+        <li><a href="#history">史海钩沉</a></li>
+    </ul>
+</nav>
+
+<!-- 主内容 -->
+<main class="content">
+
+    <section id="origin" class="section">
+        <h3>诗之源流</h3>
+        <p>
+            《毛诗序》云："诗者，志之所之也。在心为志，发言为诗。"
+            上古之时，民谣自生，击壤而歌，感物而动。诗之初，源于劳动号子、
+            祭祀祝祷与自然咏叹。其用有三：一曰言志，二曰抒情，三曰载道。
+            故诗非小道，乃华夏精神之始基。
+        </p>
+        <aside class="sidenote">
+            《尚书·尧典》："诗言志，歌永言，声依永，律和声。"
+        </aside>
+    </section>
+
+    <section id="classics" class="section">
+        <h3>诗骚乐府</h3>
+        <p>
+            《诗经》三百，思无邪，风雅颂各得其体。
+            楚地有屈原，作《离骚》，开浪漫主义先河，香草美人，寄兴幽远。
+            汉武立乐府，采民间歌谣，《陌上桑》《孔雀东南飞》皆出其中。
+            建安风骨，魏晋风度，诗体于是大备。
+        </p>
+        <aside class="sidenote">
+            "路漫漫其修远兮，吾将上下而求索。"——《离骚》
+        </aside>
+    </section>
+
+    <section id="books" class="section">
+        <h3>古籍述略</h3>
+        <p>
+            《十三经注疏》中，《毛诗正义》最为详赡。
+            宋有朱熹《诗集传》，去序言志，别开生面。
+            清代朴学大兴，王先谦《诗三家义集疏》汇通今古文。
+            此外《玉台新咏》《古诗源》《乐府诗集》，皆为治诗者必读。
+        </p>
+        <aside class="sidenote">
+            黄卷：指古籍。古人以辛味染纸防蠹，纸色微黄。
+        </aside>
+    </section>
+
+    <section id="history" class="section">
+        <h3>史海钩沉</h3>
+        <p>
+            先秦采诗之制，行人振木铎徇于路，以观民风。
+            孔子删诗，上承唐虞，下至陈灵，凡三百五篇。
+            秦火之后，齐鲁韩毛四家传《诗》，唯毛诗独存。
+            历代正史多立《艺文志》《经籍志》，诗之源流于是可考。
+        </p>
+        <aside class="sidenote">
+            "不学诗，无以言。"——《论语·季氏》
+        </aside>
+    </section>
+
+    <a href="list.html" class="back">← 返回卷册</a>
+</main>
+<footer class="page-footer">
+    <div class="footer-info">
+        <strong>模块说明：</strong>
+        本页面为“青灯黄卷”专题，系统梳理中国古典诗歌的起源、《诗经》《楚辞》等经典文献，以及相关古籍与历史背景，适用于古典文学基础知识学习。
+    </div>
+    <div class="footer-meta">
+        <span>                      @网页设计作业</span>
+        <span>|</span>
+        <span>最后更新：2026年6月</span>
+        <span>|</span>
+        <span>仅供学习使用</span>
+        <span>|</span>
+        <a href="mailto:student@example.edu.cn">联系邮箱：student@example.edu.cn</a>
+    </div>
+</footer>
+<!-- 右侧边栏 -->
+<div class="sidebar">
+    <h4>相关</h4>
+    <ul>
+        <li><a href="liuyi.html">六义：风雅颂赋比兴</a></li>
+        <li>四家诗：齐鲁韩毛</li>
+        <li>诗教：温柔敦厚</li>
+        <li>采诗官制度</li>
+    </ul>
+</div>
+
+<!-- 返回顶端 -->
+<div class="top-btn" id="topBtn">↑ 顶端</div>
+
+<script>
+const topBtn = document.getElementById('topBtn');
+
+window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('show', window.scrollY > 300);
+});
+
+topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

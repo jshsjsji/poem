@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新诗新语</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="xinshi.css">
+</head>
+<body>
+
+<!-- 左侧目录 -->
+<nav class="catalog">
+    <h2>目　录</h2>
+    <ul>
+        <li><a href="#modern">当代诗抄</a></li>
+        <li><a href="#short">短句随笔</a></li>
+        <li><a href="#theory">诗学漫谈</a></li>
+        <li><a href="#form">新体试笔</a></li>
+    </ul>
+</nav>
+
+<!-- 主内容 -->
+<main class="content">
+
+    <section id="modern" class="section">
+        <h3>当代诗抄</h3>
+        <p>
+            新诗之兴，始于五四，白话为体，自由为用。
+            然其精神未尝离古：感物吟志，一也；缘情造端，二也。
+            当代诗家，或承北岛之冷峻，或继海子之赤诚，
+            各出机杼，别开生面。
+        </p>
+        <div class="poem">
+            面朝大海，春暖花开<br>
+            ——海子
+        </div>
+    </section>
+
+    <section id="short" class="section">
+        <h3>短句随笔</h3>
+        <p>
+            诗不在长，贵在凝练。一句"举头望明月"，
+            千年以来，无人不识。短句之妙，在于留白，
+            在于未尽之言，在于读者心中各自完成的诗意。
+        </p>
+        <div class="poem">
+            你来人间一趟，你要看看太阳<br>
+            ——海子
+        </div>
+    </section>
+
+    <section id="theory" class="section">
+        <h3>诗学漫谈</h3>
+        <p>
+            诗之好坏，不在辞藻之华丽，而在意象之真切。
+            意象者，情与景会，心与物融。
+            王国维所谓"境界"，即此意也。
+            有境界则自成高格，自有名句。
+        </p>
+    </section>
+
+    <section id="form" class="section">
+        <h3>新体试笔</h3>
+        <p>
+            旧体诗词格律谨严，新诗则自由奔放。
+            二者之间，或有中间道路：以古韵写今情，
+            以新语入旧格，不拘泥于平仄，不困守于定式，
+            求其神似，而非形似。
+        </p>
+    </section>
+
+    <a href="list.html" class="back">← 返回卷册</a>
+</main>
+<footer class="page-footer">
+    <div class="footer-info">
+        <strong>模块说明：</strong>
+        本页面为“新诗新语”专题，介绍五四以来中国新诗的发展脉络、代表诗人及作品，探讨新旧诗体的融合与创新，适用于现当代文学学习。
+    </div>
+    <div class="footer-meta">
+        <span>                     @网页设计作业</span>
+        <span>|</span>
+        <span>最后更新：2026年6月</span>
+        <span>|</span>
+        <span>仅供学习使用</span>
+        <span>|</span>
+        <a href="mailto:student@example.edu.cn">联系邮箱：student@example.edu.cn</a>
+    </div>
+</footer>
+<!-- 右侧边栏 -->
+<div class="sidebar">
+    <h4>相关</h4>
+    <ul>
+        <li><a href="bailun.html">新诗百年脉络</a></li>
+        <li>意象与象征</li>
+        <li>自由诗与格律</li>
+        <li>白话与文言之间</li>
+    </ul>
+</div>
+
+<!-- 返回顶端 -->
+<div class="top-btn" id="topBtn">↑ 顶端</div>
+
+<script>
+const topBtn = document.getElementById('topBtn');
+
+window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('show', window.scrollY > 300);
+});
+
+topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

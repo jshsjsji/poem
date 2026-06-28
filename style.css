@@ -1,0 +1,218 @@
+/* ===== 原有样式保持不变 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ma Shan Zheng", "KaiTi", serif;
+    overflow: hidden;
+    background: #f5f0e6;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("bg.jpg") no-repeat center / cover;
+    filter: blur(1.2px) brightness(0.92);
+    will-change: transform;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 240, 230, 0.35);
+    z-index: 1;
+}
+
+.vertical-text {
+    font-size: 140px;
+    color: #2b2b2b;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    z-index: 2;
+    transition: transform 0.12s linear;
+    pointer-events: none;
+    letter-spacing: 20px;
+}
+
+.vertical-text.left  { position: absolute; left: 22%; }
+.vertical-text.right { position: absolute; right: 22%; }
+
+.divider {
+    width: 3px;
+    height: 60%;
+    background: #8b0000;
+    z-index: 2;
+    opacity: 0.85;
+    box-shadow: 0 0 6px rgba(139, 0, 0, 0.4);
+}
+
+.ink-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 26px;
+    color: rgb(29, 28, 28);
+    text-decoration: none;
+    letter-spacing: 10px;
+    padding: 12px 48px;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(0,0,0,0.25) 5%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(0,0,0,0.2) 8%, transparent 55%),
+        #faf7f2;
+    border: 2px solid #3e2723;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: all 0.35s ease;
+}
+
+.ink-btn:hover {
+    background: #070403;
+    color: #dadad3;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* ===== 墨水样式 ===== */
+.ink-drop {
+    position: fixed;
+    width: 60px;          /* 墨锋长度 */
+    height: 160px;        /* 墨锋高度 */
+    background: url('ink-stroke.png') no-repeat center/contain;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0.85;
+    filter: blur(0.3px);
+    animation: inkFall linear forwards;
+}
+
+@keyframes inkFall {
+    0% {
+        opacity: 0.8;
+        transform: translateY(0) scale(1);
+        filter: blur(1px);
+    }
+    50% {
+        opacity: 0.4;
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) scale(1.5);
+        filter: blur(4px);
+    }
+}
+
+/* 墨水被点击后的消散动画 */
+.ink-drop.removing {
+    animation: inkRemove 0.6s ease forwards;
+}
+
+@keyframes inkRemove {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+/* 波纹效果 */
+.ripple {
+    position: fixed;
+    border-radius: 50%;
+    border: 2px solid rgba(27, 27, 27, 0.4);
+    pointer-events: none;
+    z-index: 6;
+    animation: rippleExpand 1.5s ease-out forwards;
+}
+
+.ripple::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 1px solid rgba(135, 132, 132, 0.2);
+    animation: rippleExpand 1.8s ease-out forwards;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    border: 1px solid rgba(153, 146, 146, 0.1);
+    animation: rippleExpand 2.1s ease-out forwards;
+}
+
+@keyframes rippleExpand {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 诗词浮现 */
+.poem-overlay {
+    position: fixed;
+    right: 60px;
+    bottom: 100px;
+    z-index: 10;
+    font-size: 24px;
+    color: #8b0000;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s ease;
+    text-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+}
+
+.poem-overlay.show {
+    opacity: 1;
+}
+
+/* 点击计数 */
+.click-counter {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 10;
+    font-size: 14px;
+    color: rgba(139, 0, 0, 0.5);
+    letter-spacing: 4px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.click-counter.show {
+    opacity: 1;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>人间词话</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cihua.css">
+</head>
+<body>
+
+<nav class="catalog">
+    <h2>目　录</h2>
+    <ul>
+        <li><a href="#jingjie">境界之说</a></li>
+        <li><a href="#youwu">有我无我</a></li>
+        <li><a href="#ge">隔与不隔</a></li>
+        <li><a href="#sanjing">三重境界</a></li>
+    </ul>
+</nav>
+
+<main class="content">
+
+    <section id="jingjie" class="section">
+        <h3>境界之说</h3>
+        <p>
+            词以境界为最上。有境界则自成高格，自有名句。
+            五代北宋之词所以独绝者在此。
+            境非独谓景物也，喜怒哀乐亦人心中之一境界。
+            故能写真景物、真感情者，谓之有境界；否则谓之无境界。
+        </p>
+        <aside class="sidenote">
+            王国维《人间词话》第一条
+        </aside>
+    </section>
+
+    <section id="youwu" class="section">
+        <h3>有我无我</h3>
+        <p>
+            有我之境，以我观物，故物皆著我之色彩。
+            无我之境，以物观物，故不知何者为我，何者为物。
+            "泪眼问花花不语，乱红飞过秋千去"，
+            "可堪孤馆闭春寒，杜鹃声里斜阳暮"，有我之境也。
+            "采菊东篱下，悠然见南山"，
+            "寒波澹澹起，白鸟悠悠下"，无我之境也。
+        </p>
+    </section>
+
+    <section id="ge" class="section">
+        <h3>隔与不隔</h3>
+        <p>
+            问"隔"与"不隔"之别，曰：陶、谢之诗不隔，
+            延年则稍隔矣；东坡之诗不隔，山谷则稍隔矣。
+            "池塘生春草"、"空梁落燕泥"等二句，
+            妙处唯在不隔。词亦如是。
+            白石写景之作，虽格韵高绝，然如雾里看花，终隔一层。
+        </p>
+        <aside class="sidenote">
+            王国维论"隔"与"不隔"
+        </aside>
+    </section>
+
+    <section id="sanjing" class="section">
+        <h3>三重境界</h3>
+        <p>
+            古今之成大事业、大学问者，必经过三种之境界：
+            "昨夜西风凋碧树。独上高楼，望尽天涯路。"此第一境也。
+            "衣带渐宽终不悔，为伊消得人憔悴。"此第二境也。
+            "众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。"此第三境也。
+        </p>
+        <aside class="sidenote">
+            王国维以宋词喻治学三境
+        </aside>
+    </section>
+
+    <a href="list.html" class="back">← 返回卷册</a>
+</main>
+<footer class="page-footer">
+    <div class="footer-info">
+        <strong>模块说明：</strong>
+        本页面为“人间词话”专题，整理王国维《人间词话》的核心理论，包括境界说、有我无我之境、隔与不隔等重要美学概念，适用于文艺理论学习。
+    </div>
+    <div class="footer-meta">
+        <span>                @网页设计作业</span>
+        <span>|</span>
+        <span>最后更新：2026年6月</span>
+        <span>|</span>
+        <span>仅供学习使用</span>
+        <span>|</span>
+        <a href="mailto:student@example.edu.cn">联系邮箱：student@example.edu.cn</a>
+    </div>
+</footer>
+<div class="sidebar">
+    <h4>相关</h4>
+    <ul>
+        <li><a href="jingjie.html">境界说</a></li>
+        <li>兴趣说</li>
+        <li>神韵说</li>
+        <li>王国维年谱</li>
+    </ul>
+</div>
+
+<div class="top-btn" id="topBtn">↑ 顶端</div>
+
+<script>
+const topBtn = document.getElementById('topBtn');
+window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('show', window.scrollY > 300);
+});
+topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

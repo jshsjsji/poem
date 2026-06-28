@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文人风骨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="wenren.css">
+</head>
+<body>
+
+<nav class="catalog">
+    <h2>目　录</h2>
+    <ul>
+        <li><a href="#spirit">士人之志</a></li>
+        <li><a href="#character">孤傲之气</a></li>
+        <li><a href="#pen">笔墨风骨</a></li>
+        <li><a href="#exile">贬谪情怀</a></li>
+    </ul>
+</nav>
+
+<main class="content">
+
+    <section id="spirit" class="section">
+        <h3>士人之志</h3>
+        <p>
+            古之学者为己，今之学者为人。士人者，非仅读书识字之辈，
+            乃以天下为己任者也。范仲淹"先天下之忧而忧，后天下之乐而乐"，
+            张载"为天地立心，为生民立命"，皆士人之大志。
+        </p>
+        <aside class="sidenote">
+            "士不可以不弘毅，任重而道远。"——《论语·泰伯》
+        </aside>
+    </section>
+
+    <section id="character" class="section">
+        <h3>孤傲之气</h3>
+        <p>
+            文人风骨，首在气节。陶渊明不为五斗米折腰，
+            李白"安能摧眉折腰事权贵，使我不得开心颜"，
+            苏轼"一点浩然气，千里快哉风"。此等孤傲，非傲慢，
+            乃人格之独立，精神之自由。
+        </p>
+        <aside class="sidenote">
+            "宁为百夫长，胜作一书生。"——杨炯《从军行》
+        </aside>
+    </section>
+
+    <section id="pen" class="section">
+        <h3>笔墨风骨</h3>
+        <p>
+            文如其人，字亦如其人。颜真卿《祭侄文稿》，血泪交迸，
+            忠义之气溢于毫端。郑板桥"难得糊涂"，徐渭狂草，
+            皆以笔墨写胸中块垒，不假雕饰，直抒性情。
+        </p>
+    </section>
+
+    <section id="exile" class="section">
+        <h3>贬谪情怀</h3>
+        <p>
+            文人多坎坷，迁客骚人，常在贬途。屈原放逐，乃赋《离骚》；
+            贾谊长沙，屈平湘流。然困境往往成就佳作，
+            柳宗元"孤舟蓑笠翁，独钓寒江雪"，
+            苏轼"回首向来萧瑟处，归去，也无风雨也无晴"。
+        </p>
+        <aside class="sidenote">
+            "文章憎命达，魑魅喜人过。"——杜甫
+        </aside>
+    </section>
+
+    <a href="list.html" class="back">← 返回卷册</a>
+</main>
+<footer class="page-footer">
+    <div class="footer-info">
+        <strong>模块说明：</strong>
+        本页面为“文人风骨”专题，分析中国古代文人的精神品格、价值取向及其在文学作品中的体现，侧重人物与思想史视角，适用于文学与历史交叉学习。
+    </div>
+    <div class="footer-meta">
+        <span>                    @网页设计作业</span>
+        <span>|</span>
+        <span>最后更新：2026年6月</span>
+        <span>|</span>
+        <span>仅供学习使用</span>
+        <span>|</span>
+        <a href="mailto:student@example.edu.cn">联系邮箱：student@example.edu.cn</a>
+    </div>
+</footer>
+<div class="sidebar">
+    <h4>相关</h4>
+    <ul>
+        <li><a href="weijin.html">魏晋风度</a></li>
+        <li>竹林七贤</li>
+        <li>唐宋八大家</li>
+        <li>贬谪文学传统</li>
+    </ul>
+</div>
+
+<div class="top-btn" id="topBtn">↑ 顶端</div>
+
+<script>
+const topBtn = document.getElementById('topBtn');
+window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('show', window.scrollY > 300);
+});
+topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

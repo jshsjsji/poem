@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>诗境 · 卷册</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+
+<div class="gallery">
+    <!-- 青灯黄卷 -->
+    <div class="col" style="background-image:url('bg1.jpg');" data-href="qingdeng.html">
+        <span>青灯黄卷</span>
+        <div class="sub-rows">
+            <div class="sub-row">经史子集</div>
+            <div class="sub-row">古籍拾遗</div>
+            <div class="sub-row">笺注考据</div>
+            <div class="sub-row">版本源流</div>
+        </div>
+    </div>
+
+    <!-- 新诗新语 -->
+    <div class="col" style="background-image:url('bg2.jpg');" data-href="xinshi.html">
+        <span>新诗新语</span>
+        <div class="sub-rows">
+            <div class="sub-row">当代诗抄</div>
+            <div class="sub-row">短句随笔</div>
+            <div class="sub-row">诗学漫谈</div>
+            <div class="sub-row">新体试笔</div>
+        </div>
+    </div>
+
+    <!-- 文人风骨 -->
+    <div class="col" style="background-image:url('bg3.jpg');" data-href="wenren.html">
+        <span>文人风骨</span>
+        <div class="sub-rows">
+            <div class="sub-row">身老沧州</div>
+            <div class="sub-row">零落成泥</div>
+            <div class="sub-row">深山夕照</div>
+            <div class="sub-row">橘子洲头</div>
+        </div>
+    </div>
+
+    <!-- 人间词话 -->
+    <div class="col" style="background-image:url('bg4.jpg');" data-href="cihua.html">
+        <span>人间词话</span>
+        <div class="sub-rows">
+            <div class="sub-row">三重境界</div>
+            <div class="sub-row">隔与不隔</div>
+            <div class="sub-row">有我无我</div>
+            <div class="sub-row">何以为词</div>
+        </div>
+    </div>
+</div>
+
+<!-- 合卷 -->
+<div class="close-btn">合卷</div>
+
+<script>
+const cols = document.querySelectorAll('.col');
+const closeBtn = document.querySelector('.close-btn');
+
+cols.forEach(col => {
+    col.addEventListener('click', function (e) {
+        // 已展开 → 跳转
+        if (col.classList.contains('active')) {
+            const url = col.getAttribute('data-href');
+            if (url) {
+                window.location.href = url;
+            }
+            return;
+        }
+
+        // 未展开 → 展开
+        cols.forEach(c => {
+            c.classList.remove('active', 'side');
+        });
+
+        col.classList.add('active');
+
+        cols.forEach(c => {
+            if (!c.classList.contains('active')) {
+                c.classList.add('side');
+            }
+        });
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    cols.forEach(c => c.classList.remove('active', 'side'));
+});
+</script>
+
+</body>
+</html>
