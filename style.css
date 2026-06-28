@@ -144,7 +144,7 @@ body {
 .ripple {
     position: fixed;
     border-radius: 50%;
-    border: 2px solid rgba(27, 27, 27, 0.4);
+    border: 1.2px solid rgba(27, 27, 27, 0.4);
     pointer-events: none;
     z-index: 6;
     animation: rippleExpand 1.5s ease-out forwards;
